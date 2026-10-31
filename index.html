@@ -61,7 +61,7 @@ footer .note{margin:0; color:var(--muted); font-size:14px}
 h2{color:#161f33;text-transform:none;letter-spacing:-.01em;font-size:22px;font-weight:700}
 .card{background:#ffffff;border:1px solid #d6e0f2;border-radius:3px;padding:20px}
 
-background-image:repeating-linear-gradient(0deg, transparent 0 39px, #d6e0f2 39px 40px);
+body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;background-image:repeating-linear-gradient(0deg, transparent 0 39px, #d6e0f2 39px 40px)}
 </style>
 </head>
 <body>
@@ -76,7 +76,7 @@ background-image:repeating-linear-gradient(0deg, transparent 0 39px, #d6e0f2 39p
 
 <section class="about" id="about">
   <h2>关于</h2>
-  <p>依赖的许可审计是我的主要工作方向。</p>
+  <p>依赖的许可审计是我的主要工作方向。 当前以硕士阶段研究角色的方式推进项目。</p>
   <ul class="traits">
     <li>没搞懂的地方就直说没搞懂。</li>
     <li>失败的过程也记下来。</li>
@@ -89,12 +89,20 @@ background-image:repeating-linear-gradient(0deg, transparent 0 39px, #d6e0f2 39p
   <div class="grid two">
     <article class="card">
       <h3>依赖的许可审计的基线选择与对照设计</h3>
+      <span class="status">持续跟进</span>
     </article>
     <article class="card">
       <h3>依赖的许可审计的判定依据与复核方式</h3>
+      <span class="status">持续跟进</span>
     </article>
     <article class="card">
       <h3>依赖的许可审计里容易误判的情形与反例</h3>
+      <span class="status">持续跟进</span>
+    </article>
+    <article class="card">
+      <h3>在推进的问题</h3>
+      <p>（依赖的许可审计场景）为依赖的许可审计选哪个基线才不会被误导？用泄漏与重复检测比较至少两个基线在同一输入上的差异。</p>
+      <span class="status">进行中</span>
     </article>
   </div>
 </section>
@@ -104,6 +112,12 @@ background-image:repeating-linear-gradient(0deg, transparent 0 39px, #d6e0f2 39p
   <ul class="repos">
     <li><div class="name"><a href="https://github.com/egroits90/depaudit" rel="noopener">depaudit</a></div>
       <div class="desc">统计各来源片段的贡献量与占比，标出依赖的许可审计上最主要的来源</div>
+    </li>
+    <li><div class="name"><a href="https://github.com/egroits90/experiment_harness_2d4a9fd0" rel="noopener">experiment_harness_2d4a9fd0</a></div>
+      <div class="desc">哪些变量会改变依赖的许可审计的结果，如何用基线和对比实验区分它们？</div>
+    </li>
+    <li><div class="name"><a href="https://github.com/egroits90/leakage_controlled_comparison_0500f851" rel="noopener">leakage_controlled_comparison_0500f851</a></div>
+      <div class="desc">（依赖的许可审计场景）为依赖的许可审计选哪个基线才不会被误导？用泄漏与重复检测比较至少两个基线在同一输入上的差异。</div>
     </li>
   </ul>
 </section>
